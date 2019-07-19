@@ -12,11 +12,13 @@ root@51j0 mv cacert.pem <hash>.0
 
 root@51j0 adb root   #Optional
 root@51j0 adb remount #Optional
+root@51j0 adb shell
+root@51j0 su
 root@51j0 adb push <cert>.0 /sdcard/
-root@51j0 mount -o rw, remount /system
+root@51j0 mount -o rw,remount /system
 root@51j0 mv /sdcard/<cert>.0 /system/etc/security/cacerts/
 root@51j0 chmod 644 /system/etc/security/cacerts/<cert>.0  
-root@51j0 mount -o rw, remount /system
+root@51j0 mount -o ro,remount /system
 ```
 
 ![alt text](https://raw.githubusercontent.com/51j0/Android-Storage-Extractor/master/res/android.png "icon")
