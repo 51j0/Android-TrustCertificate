@@ -5,7 +5,7 @@
 
 ### Install Custom CA as a system-level trusted CA
 
-```bash
+```console
 root@51j0 openssl x509 -inform DER -in cacert.der -out cacert.pem
 root@51j0 openssl x509 -inform PEM -subject_hash_old -in cacert.pem |head -1
 root@51j0 mv cacert.pem <hash>.0  
